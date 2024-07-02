@@ -1,0 +1,128 @@
+.registerContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .registerContainer > div {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .rc-1,
+  .rc-2 {
+    width: 100%;
+  }
+  
+  .rc-1 > form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5em;
+  }
+  
+  .rc-1-input {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+  }
+  
+  .rc-1-input > svg {
+    position: absolute;
+    color: var(--theme-color);
+    font-size: 2em;
+    align-self: center;
+  }
+  
+  .rc-1-input > input {
+    width: 30em;
+    outline: none;
+    font-size: 1em;
+    background-color: transparent;
+    border: none;
+    color: var(--theme-color);
+    border-bottom: 0.2em solid var(--theme-color);
+    padding: 0.5em;
+    padding-left: 4em;
+  }
+  
+  .rc-1-links {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .rc-1-links > a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.75em;
+  }
+  
+  .registerBtn {
+    width: 100%;
+    outline: none;
+    background-color: transparent;
+    color: var(--theme-color);
+    border: 0.2em solid var(--theme-color);
+    padding: 1em 1.5em;
+    font-size: 1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 0.5em;
+    line-height: 1;
+    letter-spacing: 0.2em;
+    font-weight: 600;
+    text-shadow: 0 0 0.3em rgba(255, 255, 255, 0.2), 0 0 0.5em var(--theme-color);
+    box-shadow: inset 0 0 0.3em 0 var(--theme-color),
+      0 0 0.3em 0 var(--theme-color);
+    position: relative;
+    transition: background-color 100ms linear;
+  }
+  
+  .registerBtn::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    box-shadow: 0 0 1.5em 0.5em var(--theme-color);
+    opacity: 0;
+    transition: opacity 100ms linear;
+  }
+  
+  .registerBtn:hover {
+    background-color: var(--theme-color);
+    color: black;
+    text-shadow: none;
+  }
+  
+  .registerBtn:hover::after {
+    opacity: 1;
+  }
+  
+  .rc-2 {
+      padding-top: 0.5em;
+  }
+  
+  
+  @media screen and (max-width: 450px) {
+    .rc-1-input > input {
+      width: 80%;
+      font-size: 0.75em;
+    }
+  
+    .rc-1-links > a {
+      font-size: 0.5em;
+    }
+  
+    .registerBtn {
+      font-size: 0.8em;
+    }
+  }
